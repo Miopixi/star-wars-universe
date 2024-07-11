@@ -1,0 +1,25 @@
+
+.list_item_name {
+  font-size: x-large;
+  letter-spacing: 2px;
+  padding: 0.7em;
+}
+
+.list_item_area {
+  max-width: 78%;
+  padding: 0 11%;
+}
+
+@media (min-width: 760px) {
+  .list_item_area {
+    max-width: 64%;
+    padding: 0 18%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .list_item_area {
+    max-width: 48%;
+    padding: 0 26%;
+  }
+}

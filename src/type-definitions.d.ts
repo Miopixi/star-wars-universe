@@ -4,3 +4,13 @@ export type Film = {
   opening_crawl: string;
   release_date: string;
 }
+
+export type ListItem = {
+  name: string;
+  subItems: SubItem[];
+}
+
+export type SubItem = {
+  label: string;
+  value: string;
+}
