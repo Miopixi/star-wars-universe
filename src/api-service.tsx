@@ -1,4 +1,4 @@
-import { TFilms, TPeople, TResource, TSpecies, TStarships } from './types'
+import { TFilms, TPeople, TResource, TSpecies, TStarships, TVehicles } from './types'
 
 const SWAPI_PY_URL = 'https://swapi.py4e.com/api/'
 
@@ -16,6 +16,10 @@ export async function fetchSpecies (url = SWAPI_PY_URL + 'species'): Promise<TSp
 
 export async function fetchStarships (url = SWAPI_PY_URL + 'starships'): Promise<TStarships> {
   return await fetchFromSWAPI(url, 'starships') as TStarships
+}
+
+export async function fetchVehicles (url = SWAPI_PY_URL + 'vehicles'): Promise<TVehicles> {
+  return await fetchFromSWAPI(url, 'vehicles') as TVehicles
 }
 
 export async function fetchFromSWAPI (url: string, resource: string): Promise<TResource | TFilms> {

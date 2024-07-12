@@ -4,6 +4,7 @@ import Films from './components/Films'
 import People from './components/People'
 import Species from './components/Species'
 import Starships from './components/Starships'
+import Vehicles from './components/Vehicles'
 import Layout from './components/Layout'
 import LostInSpace from './components/LostInSpace'
 
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
   {
     path: '/starships',
     element: <Layout><Starships /></Layout>
+  },
+  {
+    path: '/vehicles',
+    element: <Layout><Vehicles /></Layout>
   },
 ])
 
