@@ -1,9 +1,9 @@
 
-import { ListItem } from '../type-definitions';
+import { TListItem } from '../types';
 import './components.css'
 
 interface ListProps {
-  items: ListItem[];
+  items: TListItem[];
 }
 
 function List({ items }: ListProps) {

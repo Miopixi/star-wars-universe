@@ -1,6 +1,8 @@
+import { TResource } from './types'
+
 const SWAPI_PY_URL = 'https://swapi.py4e.com/api/'
 
-export async function fetchFilms () {
+export async function fetchFilms (): Promise<TResource> {
   try {
     const res = await fetch(SWAPI_PY_URL + 'films')
     if (!res.ok) throw new Error('HTTP error')
