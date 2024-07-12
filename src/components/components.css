@@ -8,10 +8,12 @@
 .nav_link {
   padding: 0 1em;
   text-transform: uppercase;
+  font-weight: 800;
 }
 
 .active {
-  box-shadow: 0 0 5px;
+  box-shadow: 0 0 5px var(--lightgreen);
+  border-radius: 3px;
 }
 
 .lost_in_space {
@@ -24,6 +26,8 @@
 }
 
 .list_item_name {
+  color: var(--background-color);
+  font-weight: 800;
   font-size: x-large;
   letter-spacing: 2px;
   padding: 0.7em;

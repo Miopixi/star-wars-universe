@@ -13,11 +13,11 @@ function List({ items }: ListProps) {
         {
           items.map((listItem, i) => (
             <div key={ i } className='list_item_area'>
-              <div className='list_item_name'>{ listItem.name }</div>
+              <div className='list_item_name blue_glow'>{ listItem.name }</div>
               {
                 listItem.subItems.map((subItem, j) => (
                   <div key={ j }>
-                    { subItem.label } __ { subItem.value }
+                    { subItem.label }<span className='red_glow'> __ </span>{ subItem.value }
                   </div>
                 ))
               }

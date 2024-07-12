@@ -3,3 +3,47 @@
   padding: 1rem;
   height: 100vh;
 }
+
+button:hover {
+  border-color: var(--lightgreen);
+}
+
+a {
+  color: var(--background-color);
+}
+
+a, .green_glow {
+  text-shadow:
+    1px 0 1px var(--lightgreen),
+    -1px 0 1px var(--lightgreen),
+    0 1px 1px var(--lightgreen),
+    0 -1px 1px var(--lightgreen),
+    1px 1px 1px var(--lightgreen),
+    1px -1px 1px var(--lightgreen),
+    -1px 1px 1px var(--lightgreen),
+    -1px -1px 1px var(--lightgreen);
+}
+
+a:hover, .blue_glow {
+  text-shadow:
+    1px 0 1px var(--lightblue),
+    -1px 0 1px var(--lightblue),
+    0 1px 1px var(--lightblue),
+    0 -1px 1px var(--lightblue),
+    1px 1px 1px var(--lightblue),
+    1px -1px 1px var(--lightblue),
+    -1px 1px 1px var(--lightblue),
+    -1px -1px 1px var(--lightblue);
+}
+
+.red_glow {
+  text-shadow:
+    1px 0 1px var(--magenta),
+    -1px 0 1px var(--magenta),
+    0 1px 1px var(--magenta),
+    0 -1px 1px var(--magenta),
+    1px 1px 1px var(--magenta),
+    1px -1px 1px var(--magenta),
+    -1px 1px 1px var(--magenta),
+    -1px -1px 1px var(--magenta);
+}
