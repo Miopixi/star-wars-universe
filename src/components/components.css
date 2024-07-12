@@ -5,6 +5,15 @@
   border-radius: 5px;
 }
 
+.nav_link {
+  padding: 0 1em;
+  text-transform: uppercase;
+}
+
+.active {
+  box-shadow: 0 0 5px;
+}
+
 .lost_in_space {
   font-size: xx-large;
   display: flex;

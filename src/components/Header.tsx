@@ -12,7 +12,8 @@ function Header() {
 
         <nav>
           <ul>
-            <NavLink to='/people'>People</NavLink>
+            <NavLink className='nav_link' to='/people'>People</NavLink>
+            <NavLink className='nav_link' to='/species'>Species</NavLink>
           </ul>
         </nav>
       </header>

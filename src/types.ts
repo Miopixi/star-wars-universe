@@ -27,6 +27,17 @@ export type TPeople = {
   results: TPerson[];
 }
 
+export type TSingleSpecies = TCommon & {
+  eye_colors: string;
+  hair_colors: string;
+  language: string;
+}
+
+export type TSpecies = {
+  next: string;
+  results: TSingleSpecies[];
+}
+
 export type TListItem = {
   name: string;
   subItems: TSubItem[];
@@ -42,4 +53,4 @@ export type TResource = {
   results: TResourceResults;
 }
 
-export type TResourceResults = TPerson[];
+export type TResourceResults = TPerson[] | TSingleSpecies[];
