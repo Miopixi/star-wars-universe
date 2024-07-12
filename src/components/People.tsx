@@ -1,7 +1,8 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 import { fetchPeople } from '../api-service'
-import { TListItem, TPerson } from '../types'
+import { TListItem, TPerson, TResourceResults } from '../types'
+import DynamicList from './DynamicList'
 import List from './List'
 
 function createListItems (people: TPerson[]): TListItem[] {
@@ -15,17 +16,30 @@ function createListItems (people: TPerson[]): TListItem[] {
   }))
 }
 
+function ensureUniqueness (people: TPerson[]): TPerson[] {
+  return [...new Set(people.map(p => JSON.stringify(p)))].map(p => JSON.parse(p))
+}
+
+function sortByFilms (people: TPerson[]): TPerson[] {
+  return [...people].sort((a, b) => a.films.length - b.films.length)
+}
+
+
 function People() {
 
   const [ people, setPeople ] = useState<TPerson[]>([])
 
-  useEffect(() => {
-    fetchPeople().then(people => setPeople(people.results))
-  }, [])
+  const updatePeople = (next?: TResourceResults) => {
+    next
+      ? setPeople(prev => ensureUniqueness([...prev, ...sortByFilms(next as TPerson[])]))
+      : setPeople(sortByFilms(people))
+  }
 
   return (
     <>
-      <List items={ createListItems(people) } />
+      <DynamicList fetchResource={ fetchPeople } updateResource={ updatePeople }>
+        <List items={ createListItems(people) } />
+      </DynamicList>
     </>
   )
 }

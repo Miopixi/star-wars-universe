@@ -39,5 +39,7 @@ export type TSubItem = {
 
 export type TResource = {
   next: string;
-  results: TPerson[];
+  results: TResourceResults;
 }
+
+export type TResourceResults = TPerson[];

@@ -1,4 +1,10 @@
 
+.button {
+  margin: 2em;
+  padding: 1em 2em;
+  border-radius: 5px;
+}
+
 .lost_in_space {
   font-size: xx-large;
   display: flex;
