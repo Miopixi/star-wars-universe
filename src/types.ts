@@ -62,6 +62,17 @@ export type TVehicles = {
   results: TVehicle[];
 }
 
+export type TPlanet = TCommon & {
+  climate: string;
+  terrain: string;
+  population: string;
+}
+
+export type TPlanets = {
+  next: string;
+  results: TPlanet[];
+}
+
 export type TListItem = {
   name: string;
   subItems: TSubItem[];
@@ -77,4 +88,4 @@ export type TResource = {
   results: TResourceResults;
 }
 
-export type TResourceResults = TPerson[] | TSingleSpecies[] | TStarship[] | TVehicle[];
+export type TResourceResults = TPerson[] | TSingleSpecies[] | TStarship[] | TVehicle[] | TPlanet[];
