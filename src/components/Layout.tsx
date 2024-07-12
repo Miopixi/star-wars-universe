@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 
-import Title from './Title'
+import Header from './Header';
 
 interface LayoutProps {
   children: ReactNode;
@@ -10,7 +10,7 @@ function Layout({ children }: LayoutProps) {
 
   return (
     <>
-      <Title />
+      <Header />
       <main>{ children }</main>
     </>
   )

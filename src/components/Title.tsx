@@ -3,7 +3,9 @@ function Title() {
 
   return (
     <>
-      Star Wars Universe
+      <a href='/'>
+        Star Wars Universe
+      </a>
     </>
   )
 }
