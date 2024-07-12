@@ -14,6 +14,7 @@ function Header() {
           <ul>
             <NavLink className='nav_link' to='/people'>People</NavLink>
             <NavLink className='nav_link' to='/species'>Species</NavLink>
+            <NavLink className='nav_link' to='/starships'>Starships</NavLink>
           </ul>
         </nav>
       </header>

@@ -38,6 +38,18 @@ export type TSpecies = {
   results: TSingleSpecies[];
 }
 
+export type TStarship = TCommon & {
+  crew: string;
+  passengers: string;
+  hyperdrive_rating: string;
+  model: string;
+}
+
+export type TStarships = {
+  next: string;
+  results: TStarship[];
+}
+
 export type TListItem = {
   name: string;
   subItems: TSubItem[];
@@ -53,4 +65,4 @@ export type TResource = {
   results: TResourceResults;
 }
 
-export type TResourceResults = TPerson[] | TSingleSpecies[];
+export type TResourceResults = TPerson[] | TSingleSpecies[] | TStarship[];

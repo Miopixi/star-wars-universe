@@ -3,6 +3,7 @@ import { createBrowserRouter } from 'react-router-dom'
 import Films from './components/Films'
 import People from './components/People'
 import Species from './components/Species'
+import Starships from './components/Starships'
 import Layout from './components/Layout'
 import LostInSpace from './components/LostInSpace'
 
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: '/species',
     element: <Layout><Species /></Layout>
+  },
+  {
+    path: '/starships',
+    element: <Layout><Starships /></Layout>
   },
 ])
 
