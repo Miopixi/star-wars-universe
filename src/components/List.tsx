@@ -10,6 +10,7 @@ function List({ items }: ListProps) {
 
   return (
     <>
+      <div className='list'>
         {
           items.map((listItem, i) => (
             <div key={ i } className='list_item_area'>
@@ -24,6 +25,7 @@ function List({ items }: ListProps) {
             </div>
           ))
         }
+      </div>
     </>
   )
 }

@@ -1,11 +1,11 @@
 import { ReactNode, useEffect, useState } from 'react'
 
-import { TResource, TResourceResults } from '../types'
+import { TResource, TResourceResult } from '../types'
 
 interface DynamicListProps {
   children: ReactNode;
   fetchResource: (url?: string) => Promise<TResource>;
-  updateResource: (next?: TResourceResults) => void;
+  updateResource: (next?: TResourceResult[]) => void;
 }
 
 function DynamicList({ children, fetchResource, updateResource }: DynamicListProps) {
