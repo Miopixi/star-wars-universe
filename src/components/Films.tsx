@@ -8,12 +8,12 @@ function sortByEpisode (films: TFilm[]): TFilm[] {
   return [...films].sort((a: TFilm, b: TFilm) => a.episode_id - b.episode_id)
 }
 
-function createListItems (films: TFilm[]): TListItem[] {
+function createFilmListItems (films: TFilm[]): TListItem[] {
   return films.map(film => ({
     name: film.title,
     subItems: [
       { label: 'Release year', value: film.release_date.substring(0, 4) },
-      { label: 'Opening crawl', value: film.opening_crawl }
+      { label: 'Opening crawl', value: film.opening_crawl },
     ]
   }))
 }
@@ -28,7 +28,7 @@ function Films() {
 
   return (
     <>
-      <List items={ createListItems(films) } />
+      <List items={ createFilmListItems(films) } />
     </>
   )
 }

@@ -89,4 +89,3 @@ export type TResource = {
 }
 
 export type TResourceResult = TPerson | TSingleSpecies | TStarship | TVehicle | TPlanet
-export type TResourceResults = TPerson[] | TSingleSpecies[] | TStarship[] | TVehicle[] | TPlanet[];

@@ -1,45 +1,24 @@
-import { useState } from 'react'
 
 import { fetchSpecies } from '../api-service'
-import { TListItem, TResourceResults, TSingleSpecies } from '../types'
-import DynamicList from './DynamicList'
-import List from './List'
+import { TSingleSpecies, TSubItem, TResourceResult } from '../types'
+import Resource from './Resource'
 
-function createListItems (species: TSingleSpecies[]): TListItem[] {
-  return species.map(singleSpecies => ({
-    name: singleSpecies.name,
-    subItems: [
-      { label: 'Eye colors', value: singleSpecies.eye_colors },
-      { label: 'Hair colors', value: singleSpecies.hair_colors },
-      { label: 'Language', value: singleSpecies.language },
-    ]
-  }))
-}
+function createSingleSpeciesSubItems (result: TResourceResult): TSubItem[] {
+  const singleSpecies = result as TSingleSpecies
 
-function ensureUniqueness (species: TSingleSpecies[]): TSingleSpecies[] {
-  return [...new Set(species.map(s => JSON.stringify(s)))].map(s => JSON.parse(s))
-}
-
-function sortByFilms (species: TSingleSpecies[]): TSingleSpecies[] {
-  return [...species].sort((a, b) => a.films.length - b.films.length)
+  return [
+    { label: 'Eye colors', value: singleSpecies.eye_colors },
+    { label: 'Hair colors', value: singleSpecies.hair_colors },
+    { label: 'Language', value: singleSpecies.language },
+  ]
 }
 
 
 function Species() {
 
-  const [ species, setSpecies ] = useState<TSingleSpecies[]>([])
-
-  const updateSpecies = (next?: TResourceResults) => {
-    next
-      ? setSpecies(prev => ensureUniqueness([...prev, ...sortByFilms(next as TSingleSpecies[])]))
-      : setSpecies(sortByFilms(species))
-  }
-
   return (
     <>
-      <DynamicList fetchResource={ fetchSpecies } updateResource={ updateSpecies }>
-        <List items={ createListItems(species) } />
-      </DynamicList>
+      <Resource fetchResource={ fetchSpecies } createSubItems={ createSingleSpeciesSubItems } />
     </>
   )
 }
