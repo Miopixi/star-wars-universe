@@ -1,4 +1,12 @@
 
+.signature {
+  text-align: right;
+  position: fixed;
+  padding: 2em;
+  bottom: 0;
+  right: 0;
+}
+
 .button {
   margin: 2em;
   padding: 1em 2em;
