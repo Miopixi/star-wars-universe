@@ -2,6 +2,8 @@ export type TStar = {
   x: number;
   y: number;
   radius: number;
+  phase: number;
+  brightness: number;
 }
 
 export type TFilm = {

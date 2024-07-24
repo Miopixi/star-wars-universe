@@ -2,6 +2,7 @@
 .starry_sky {
   position: fixed;
   z-index: -1;
+  animation: rotateSky 980s linear infinite;
 }
 
 .signature {
@@ -78,5 +79,14 @@
   .list_item_area {
     max-width: 48%;
     padding: 0 26%;
+  }
+}
+
+@keyframes rotateSky {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
