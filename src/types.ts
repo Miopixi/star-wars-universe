@@ -1,3 +1,9 @@
+export type TStar = {
+  x: number;
+  y: number;
+  radius: number;
+}
+
 export type TFilm = {
   title: string;
   episode_id: number;
