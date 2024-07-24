@@ -6,7 +6,8 @@
 }
 
 .signature {
-  text-align: right;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
   position: fixed;
   padding: 2em;
   bottom: 0;
@@ -79,6 +80,10 @@
   .list_item_area {
     max-width: 48%;
     padding: 0 26%;
+  }
+
+  .signature {
+    writing-mode: horizontal-tb;
   }
 }
 
