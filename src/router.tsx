@@ -12,29 +12,38 @@ import LostInSpace from './components/LostInSpace'
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Layout><Films /></Layout>,
-    errorElement: <Layout><LostInSpace /></Layout>
-  },
-  {
-    path: '/people',
-    element: <Layout><People /></Layout>
-  },
-  {
-    path: '/species',
-    element: <Layout><Species /></Layout>
-  },
-  {
-    path: '/starships',
-    element: <Layout><Starships /></Layout>
-  },
-  {
-    path: '/vehicles',
-    element: <Layout><Vehicles /></Layout>
-  },
-  {
-    path: '/planets',
-    element: <Layout><Planets /></Layout>
-  },
+    element: <Layout />,
+    children: [
+      {
+        path: '*',
+        element: <LostInSpace />
+      },
+      {
+        path: '',
+        element: <Films />
+      },
+      {
+        path: '/people',
+        element: <People />
+      },
+      {
+        path: '/species',
+        element: <Species />
+      },
+      {
+        path: '/starships',
+        element: <Starships />
+      },
+      {
+        path: '/vehicles',
+        element: <Vehicles />
+      },
+      {
+        path: '/planets',
+        element: <Planets />
+      },
+    ]
+  }
 ])
 
 export default router

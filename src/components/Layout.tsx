@@ -1,20 +1,16 @@
-import { ReactNode } from 'react'
+import { Outlet } from 'react-router-dom'
 
 import StarrySky from './StarrySky'
 import Header from './Header'
 import Footer from './Footer'
 
-interface LayoutProps {
-  children: ReactNode;
-}
-
-function Layout({ children }: LayoutProps) {
+function Layout() {
 
   return (
     <>
       <StarrySky />
       <Header />
-      <main>{ children }</main>
+      <main><Outlet /></main>
       <Footer />
     </>
   )
