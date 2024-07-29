@@ -4,6 +4,10 @@
   height: 100vh;
 }
 
+li {
+  list-style-type: none;
+}
+
 button:hover {
   border-color: var(--lightgreen);
 }

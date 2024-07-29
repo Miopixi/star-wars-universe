@@ -8,11 +8,21 @@ function Navigation() {
     <>
       <nav>
         <ul className='nav_links'>
-          <NavLink className='nav_link' to='/people'>People</NavLink>
-          <NavLink className='nav_link' to='/species'>Species</NavLink>
-          <NavLink className='nav_link' to='/starships'>Starships</NavLink>
-          <NavLink className='nav_link' to='/vehicles'>Vehicles</NavLink>
-          <NavLink className='nav_link' to='/planets'>Planets</NavLink>
+          <li>
+            <NavLink className='nav_link' to='/people'>People</NavLink>
+          </li>
+          <li>
+            <NavLink className='nav_link' to='/species'>Species</NavLink>
+          </li>
+          <li>
+            <NavLink className='nav_link' to='/starships'>Starships</NavLink>
+          </li>
+          <li>
+            <NavLink className='nav_link' to='/vehicles'>Vehicles</NavLink>
+          </li>
+          <li>
+            <NavLink className='nav_link' to='/planets'>Planets</NavLink>
+          </li>
         </ul>
       </nav>
     </>
