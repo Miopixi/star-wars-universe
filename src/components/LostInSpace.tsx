@@ -4,7 +4,9 @@ function LostInSpace() {
   return (
     <>
       <div className='lost_in_space'>
-        <div><b>Oooops!</b></div>
+        <div className='oops blue_glow'>
+          <b>Oooops!</b>
+        </div>
         <div>Lost in Space</div>
       </div>
     </>
