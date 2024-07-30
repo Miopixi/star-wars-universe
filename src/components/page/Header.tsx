@@ -1,7 +1,7 @@
 
 import { Navigation } from './Navigation'
 import { Title } from './Title'
-import './components.css'
+import '../components.css'
 
 function Header() {
 

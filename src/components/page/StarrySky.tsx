@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 
-import { createStar, drawStars } from '../canvas/stars'
-import { TStar } from '../types'
+import { createStar, drawStars } from '../../canvas/stars'
+import { TStar } from '../../types'
 
 const NUMBER_OF_STARS = 777
 

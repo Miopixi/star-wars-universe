@@ -6,7 +6,7 @@ import { Species } from './components/Species'
 import { Starships } from './components/Starships'
 import { Vehicles } from './components/Vehicles'
 import { Planets } from './components/Planets'
-import { Layout } from './components/Layout'
+import { Layout } from './components/page/Layout'
 import { LostInSpace } from './components/LostInSpace'
 
 const router = createBrowserRouter([
