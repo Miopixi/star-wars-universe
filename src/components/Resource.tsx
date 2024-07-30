@@ -30,6 +30,7 @@ function Resource({ fetchResource, createSubItems }: ResourceProps) {
 
   const createListItems = (): TListItem[] => {
     return resource.map(result => ({
+      url: result.url,
       name: result.name,
       subItems: createSubItems(result),
     }))

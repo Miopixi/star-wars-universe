@@ -7,6 +7,7 @@ export type TStar = {
 }
 
 export type TFilm = {
+  url: string;
   title: string;
   episode_id: number;
   opening_crawl: string;
@@ -19,8 +20,8 @@ export type TFilms = {
 }
 
 export type TCommon = {
-  name: string;
   url: string;
+  name: string;
   films: string[];
 }
 
@@ -82,6 +83,7 @@ export type TPlanets = {
 }
 
 export type TListItem = {
+  url: string;
   name: string;
   subItems: TSubItem[];
 }

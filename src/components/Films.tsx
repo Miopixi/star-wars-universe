@@ -10,6 +10,7 @@ function sortByEpisode (films: TFilm[]): TFilm[] {
 
 function createFilmListItems (films: TFilm[]): TListItem[] {
   return films.map(film => ({
+    url: film.url,
     name: film.title,
     subItems: [
       { label: 'Release year', value: film.release_date.substring(0, 4) },
