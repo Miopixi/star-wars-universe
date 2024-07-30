@@ -10,4 +10,4 @@ function Title() {
   )
 }
 
-export default Title
+export { Title }

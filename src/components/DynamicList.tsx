@@ -43,4 +43,4 @@ function DynamicList({ children, fetchResource, updateResource }: DynamicListPro
   )
 }
 
-export default DynamicList
+export { DynamicList }

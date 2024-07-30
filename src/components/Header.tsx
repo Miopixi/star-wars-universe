@@ -1,6 +1,6 @@
 
-import Navigation from './Navigation'
-import Title from './Title'
+import { Navigation } from './Navigation'
+import { Title } from './Title'
 import './components.css'
 
 function Header() {
@@ -15,4 +15,4 @@ function Header() {
   )
 }
 
-export default Header
+export { Header }

@@ -1,8 +1,8 @@
 import { Outlet } from 'react-router-dom'
 
-import StarrySky from './StarrySky'
-import Header from './Header'
-import Footer from './Footer'
+import { StarrySky } from './StarrySky'
+import { Header } from './Header'
+import { Footer } from './Footer'
 
 function Layout() {
 
@@ -16,4 +16,4 @@ function Layout() {
   )
 }
 
-export default Layout
+export { Layout }

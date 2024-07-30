@@ -11,4 +11,4 @@ function LostInSpace() {
   )
 }
 
-export default LostInSpace
+export { LostInSpace }

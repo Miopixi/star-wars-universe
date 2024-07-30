@@ -1,7 +1,7 @@
 
 import { fetchStarships } from '../api-service'
 import { TStarship, TSubItem, TResourceResult } from '../types'
-import Resource from './Resource'
+import { Resource } from './Resource'
 
 function createStarshipSubItems (result: TResourceResult): TSubItem[] {
   const starship = result as TStarship
@@ -24,4 +24,4 @@ function Starships() {
   )
 }
 
-export default Starships
+export { Starships }

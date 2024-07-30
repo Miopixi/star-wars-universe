@@ -1,7 +1,7 @@
 
 import { fetchSpecies } from '../api-service'
 import { TSingleSpecies, TSubItem, TResourceResult } from '../types'
-import Resource from './Resource'
+import { Resource } from './Resource'
 
 function createSingleSpeciesSubItems (result: TResourceResult): TSubItem[] {
   const singleSpecies = result as TSingleSpecies
@@ -23,4 +23,4 @@ function Species() {
   )
 }
 
-export default Species
+export { Species }

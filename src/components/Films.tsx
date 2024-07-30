@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 
 import { fetchFilms } from '../api-service'
 import { TFilm, TListItem } from '../types'
-import List from './List'
+import { List } from './List'
 
 function sortByEpisode (films: TFilm[]): TFilm[] {
   return [...films].sort((a: TFilm, b: TFilm) => a.episode_id - b.episode_id)
@@ -33,4 +33,4 @@ function Films() {
   )
 }
 
-export default Films
+export { Films }

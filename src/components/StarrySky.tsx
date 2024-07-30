@@ -50,4 +50,4 @@ const StarrySky = () => {
   )
 }
 
-export default StarrySky
+export { StarrySky }

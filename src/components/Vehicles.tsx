@@ -1,7 +1,7 @@
 
 import { fetchVehicles } from '../api-service'
 import { TVehicle, TSubItem, TResourceResult } from '../types'
-import Resource from './Resource'
+import { Resource } from './Resource'
 
 function vehicleSubItems (result: TResourceResult): TSubItem[] {
   const vehicle = result as TVehicle
@@ -24,4 +24,4 @@ function Vehicles() {
   )
 }
 
-export default Vehicles
+export { Vehicles }

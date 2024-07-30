@@ -1,7 +1,7 @@
 
 import { fetchPeople } from '../api-service'
 import { TPerson, TSubItem, TResourceResult } from '../types'
-import Resource from './Resource'
+import { Resource } from './Resource'
 
 function personSubItems (result: TResourceResult): TSubItem[] {
   const person = result as TPerson
@@ -23,4 +23,4 @@ function People() {
   )
 }
 
-export default People
+export { People }

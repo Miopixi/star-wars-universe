@@ -30,4 +30,4 @@ function List({ items }: ListProps) {
   )
 }
 
-export default List
+export { List }

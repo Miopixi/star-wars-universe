@@ -1,8 +1,8 @@
 import { useState } from 'react'
 
 import { TResource, TSubItem, TListItem, TResourceResult } from '../types'
-import DynamicList from './DynamicList'
-import List from './List'
+import { DynamicList } from './DynamicList'
+import { List } from './List'
 
 function ensureUniqueness (resource: TResourceResult[]): TResourceResult[] {
   return [...new Set(resource.map(p => JSON.stringify(p)))].map(p => JSON.parse(p))
@@ -44,4 +44,4 @@ function Resource({ fetchResource, createSubItems }: ResourceProps) {
   )
 }
 
-export default Resource
+export { Resource }

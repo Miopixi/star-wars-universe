@@ -1,7 +1,7 @@
 
 import { fetchPlanets } from '../api-service'
 import { TPlanet, TSubItem, TResourceResult } from '../types'
-import Resource from './Resource'
+import { Resource } from './Resource'
 
 function planetSubItems (result: TResourceResult): TSubItem[] {
   const planet = result as TPlanet
@@ -23,4 +23,4 @@ function Planets() {
   )
 }
 
-export default Planets
+export { Planets }
